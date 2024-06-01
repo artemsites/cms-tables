@@ -1,0 +1,79 @@
+# This file is the entry point to configure your own services.
+# Files in the packages/ subdirectory configure your dependencies.
+
+# Put parameters here that don't need to change on each machine where the app is deployed
+# https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration
+parameters:
+
+services:
+    # default configuration for services in *this* file
+    _defaults:
+        autowire: true      # Automatically injects dependencies in your services.
+        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+
+    # makes classes in src/ available to be used as services
+    # this creates a service per class whose id is the fully-qualified class name
+    App\:
+        resource: '../src/'
+        exclude:
+            - '../src/DependencyInjection/'
+            - '../src/Entity/'
+            - '../src/Kernel.php'
+
+    # add more service definitions when explicit configuration is needed
+    # please note that last definitions always *replace* previous ones
+
+
+
+    App\Service\Shortcodes\ShortcodesInterface:
+        shared: false # This allows you to get a new instance every time
+
+    # App\Service\:
+    #     resource: '../src/Service/*'
+
+    App\Service\Shortcodes\:
+        resource: '../src/Service/Shortcodes/*'
+        tags: ['app.shortcodes']
+        
+    app.shortcodes_locator:
+        class: Symfony\Component\DependencyInjection\ServiceLocator
+        arguments: 
+            [!tagged_iterator app.shortcodes]
+            # [!tagged_locator app.shortcodes]
+
+    App\Service\ShortcodesFactory:
+        arguments:
+            $locator: '@app.shortcodes_locator'
+
+
+
+    App\Service\MarkdownParserService:
+        public: true  # or false, depending on whether you want to make it publicly accessible
+
+
+
+    Google_Client:
+        class: Google_Client
+        # factory: ['App\Service\GoogleSheetsService', 'createClient']
+        factory: ['App\Service\GoogleClientFactory', 'createFromJson']
+        arguments:
+            $credentialsJson: '%kernel.project_dir%/config/google-drive-access.json'
+            $scopes: 
+                - 'https://www.googleapis.com/auth/drive.file'
+            
+            # $clientId: '%env(GOOGLE_CLIENT_ID)%'
+            # $clientSecret: '%env(GOOGLE_CLIENT_SECRET)%'
+            # $redirectUri: '%env(GOOGLE_REDIRECT_URI)%'
+            # $scopes: ['%env(GOOGLE_SCOPES)%']
+
+    App\Service\GoogleSheetsService:
+        arguments:
+            $credentialsJson: '%kernel.project_dir%/config/google-sheets-access.json'
+
+
+
+    Symfony\Contracts\Cache\CacheInterface $pageCache: '@app.page_cache'
+
+
+
+    # App\Service\CheckString: ~
