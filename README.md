@@ -24,8 +24,13 @@ DATABASE_URL="mysql://username:password@server.com:3306/dbname?serverVersion=5.7
 ```
 
 ## Upload code to your server
+One level higher than your public folder for the site! 
 
-
+## Create link to public
+If the root folder on your server is set to public_html:  
+```
+ln -s public public_html
+```
 
 ---
 
