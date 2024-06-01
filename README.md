@@ -9,9 +9,19 @@
 git clone git@github.com:artemsites/cms-sheets.git
 ```
 
-## Copy and rename `.env.example -> .env`
+## Copy and rename  
+```
+.env.example -> .env
+```
 
-
+## Set connection MySQL in .env
+```
+DATABASE_URL="mysql://username:password@server.com:3306/dbname"
+```
+With mysql version:
+```
+DATABASE_URL="mysql://username:password@server.com:3306/dbname?serverVersion=5.7.21"
+```
 
 
 ---
