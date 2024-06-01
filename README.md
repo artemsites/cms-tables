@@ -23,6 +23,27 @@ With mysql version:
 DATABASE_URL="mysql://username:password@server.com:3306/dbname?serverVersion=5.7.21"
 ```
 
+## Update vendor libs
+```
+composer update
+```
+
+
+
+## Create site files in Google Drive:  
+1 Create site folder for site files in Google Drive
+  somesite.com
+2 Download file "Pages & Menu"
+  https://docs.google.com/spreadsheets/d/17Z1l-7S-VNsdHu3RWHbEIOrtjSi37D-1aOKoK_moX7g
+3 Create in Google Drive: 
+  somesite.com/Pages & Menu
+
+
+
+
+
+
+
 ## Upload code to your server
 One level higher than your public folder for the site! 
 
@@ -31,7 +52,6 @@ If the root folder on your server is set to public_html:
 ```
 ln -s public public_html
 ```
-
 ---
 
 # Features
