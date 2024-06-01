@@ -75,7 +75,7 @@ class PageUpdateFromSheetController extends AbstractController
             $entityManager->persist($page);
             $entityManager->flush();
 
-            $cacheKey = $url;
+            $cacheKey = urlencode($url);
             $pageCache->delete($cacheKey);
             
             return new Response('success', Response::HTTP_OK);

@@ -35,7 +35,7 @@ class PageController extends AbstractController
         // !@note the match comes without the first slash, and in the database and cms the url with the first slash
         $url = '/'.$url;
 
-        $cacheKey = $url;
+        $cacheKey = urlencode($url);
 
         $pageContent = $pageCache->get($cacheKey, function (ItemInterface $item) use ($pageRepository, $url) {
             $item->expiresAfter(365 * 24 * 60 * 60);
