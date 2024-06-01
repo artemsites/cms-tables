@@ -30,6 +30,11 @@ composer update
 
 
 
+## Install Symfony at local pc for development
+https://symfony.com/doc/current/setup.html
+
+
+
 ## Create site files in Google Drive: 
 1 Create site folder for site files in Google Drive
   somesite.com
