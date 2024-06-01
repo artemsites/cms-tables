@@ -28,12 +28,13 @@ DATABASE_URL="mysql://username:password@server.com:3306/dbname?serverVersion=5.7
 composer update
 ```
 
-
-
 ## Install Symfony at local pc for development
 https://symfony.com/doc/current/setup.html
 
-
+## Create migration Entities to your db
+```
+php bin/console doctrine:migrations:migrate
+```
 
 ## Create site files in Google Drive: 
 1 Create site folder for site files in Google Drive
