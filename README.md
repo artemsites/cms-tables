@@ -23,6 +23,9 @@ With mysql version:
 DATABASE_URL="mysql://username:password@server.com:3306/dbname?serverVersion=5.7.21"
 ```
 
+## Upload code to your server
+
+
 
 ---
 
