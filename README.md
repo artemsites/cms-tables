@@ -54,16 +54,16 @@ php8.3 bin/console doctrine:migrations:migrate
 
 
 
-## Create site files in Google Drive: 
-1 Create site folder for site files in Google Drive
-  somesite.com
-2 Download file "Pages & Menu"
-  https://docs.google.com/spreadsheets/d/19NC3QrrWEvAwljyhzKF9LqCds4gtOvP5OAZUqqd3k-w
-3 Create in Google Drive: 
-  somesite.com/Pages & Menu
-4 Add key to: 
-  1 Расширения -> Apps Script -> config.gs (and domain)
-  2 .env -> APP_GOOGLE_APP_SCRIPTS_TOKEN
+## Create site files in Google Drive:   
+1 Create site folder for site files in Google Drive   
+  somesite.com   
+2 Download file "Pages & Menu"   
+  https://docs.google.com/spreadsheets/d/19NC3QrrWEvAwljyhzKF9LqCds4gtOvP5OAZUqqd3k-w   
+3 Create in Google Drive:    
+  somesite.com/Pages & Menu   
+4 Add key to:    
+  1 Расширения -> Apps Script -> config.gs (and domain)   
+  2 .env -> APP_GOOGLE_APP_SCRIPTS_TOKEN    
 
 
 
