@@ -31,8 +31,9 @@ composer update
 ## Install Symfony at local pc for development
 https://symfony.com/doc/current/setup.html
 
-## Create migration Entities to your db
+## Create migration Entities (src/Entity) to your db (with mysql connect)
 ```
+php bin/console make:migration
 php bin/console doctrine:migrations:migrate
 ```
 
