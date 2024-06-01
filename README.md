@@ -9,12 +9,12 @@
 git clone git@github.com:artemsites/cms-sheets.git
 ```
 
-## Copy and rename  
+## Copy and rename 
 ```
 .env.example -> .env
 ```
 
-## Set connection MySQL in .env
+## Set connection MySQL in .env 
 ```
 DATABASE_URL="mysql://username:password@server.com:3306/dbname"
 ```
@@ -23,14 +23,14 @@ With mysql version:
 DATABASE_URL="mysql://username:password@server.com:3306/dbname?serverVersion=5.7.21"
 ```
 
-## Update vendor libs
+## Update vendor libs 
 ```
 composer update
 ```
 
 
 
-## Create site files in Google Drive:  
+## Create site files in Google Drive: 
 1 Create site folder for site files in Google Drive
   somesite.com
 2 Download file "Pages & Menu"
@@ -40,30 +40,26 @@ composer update
 
 
 
-
-
-
-
-## Upload code to your server
+## Upload code to your server 
 One level higher than your public folder for the site! 
 
-## Create link to public
+## Create link to public 
 If the root folder on your server is set to public_html:  
 ```
 ln -s public public_html
 ```
 ---
 
-# Features
+# Features 
 
-## Fill in the content as HTML or MD
-## Insert shortcodes like [[youtube id="7c238trc"]] into the content (HTML or MD)
+## Fill in the content as HTML or MD 
+## Insert shortcodes like [[youtube id="7c238trc"]] into the content (HTML or MD) 
 
---
+---
 
 # Configuration 
 
-## Vue the type of interpolation brackets is specified in .env:   
+## Vue the type of interpolation brackets is specified in .env: 
   SHORTCODE_START_REGEXP   
   SHORTCODE_END_REGEXP    
   > It shouldn't be {{ }} - it's twig   
