@@ -1,6 +1,6 @@
 # For server production:
-# SetEnv APP_DEBUG 0
-# SetEnv APP_ENV prod
+SetEnv APP_DEBUG 0
+SetEnv APP_ENV prod
 
 
 
