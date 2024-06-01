@@ -40,6 +40,8 @@ composer update
 php8.3 $(which ~/.local/bin/composer) update
 ```
 
+
+
 ## Create migration Entities (src/Entity) to your db (with mysql connect) 
 ```
 php bin/console make:migration
@@ -51,6 +53,7 @@ php8.3 bin/console doctrine:migrations:migrate
 ```
 
 
+
 ## Create site files in Google Drive: 
 1 Create site folder for site files in Google Drive
   somesite.com
@@ -58,11 +61,15 @@ php8.3 bin/console doctrine:migrations:migrate
   https://docs.google.com/spreadsheets/d/17Z1l-7S-VNsdHu3RWHbEIOrtjSi37D-1aOKoK_moX7g
 3 Create in Google Drive: 
   somesite.com/Pages & Menu
+4 Add key to: 
+  1 Расширения -> Apps Script -> config.gs (and domain)
+  2 .env -> APP_GOOGLE_APP_SCRIPTS_TOKEN
 
-## Install Symfony at local pc for development
-https://symfony.com/doc/current/setup.html
+
 
 ---
+
+
 
 # Features 
 
