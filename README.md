@@ -18,34 +18,10 @@ git clone git@github.com:artemsites/cms-sheets.git
 ```
 DATABASE_URL="mysql://username:password@server.com:3306/dbname"
 ```
-With mysql version:
+With mysql version: 
 ```
 DATABASE_URL="mysql://username:password@server.com:3306/dbname?serverVersion=5.7.21"
 ```
-
-## Update vendor libs 
-```
-composer update
-```
-
-## Install Symfony at local pc for development
-https://symfony.com/doc/current/setup.html
-
-## Create migration Entities (src/Entity) to your db (with mysql connect)
-```
-php bin/console make:migration
-php bin/console doctrine:migrations:migrate
-```
-
-## Create site files in Google Drive: 
-1 Create site folder for site files in Google Drive
-  somesite.com
-2 Download file "Pages & Menu"
-  https://docs.google.com/spreadsheets/d/17Z1l-7S-VNsdHu3RWHbEIOrtjSi37D-1aOKoK_moX7g
-3 Create in Google Drive: 
-  somesite.com/Pages & Menu
-
-
 
 ## Upload code to your server 
 One level higher than your public folder for the site! 
@@ -55,6 +31,37 @@ If the root folder on your server is set to public_html:
 ```
 ln -s public public_html
 ```
+
+## Update vendor libs 
+```
+composer update
+
+# if shared hosting & composer installed to ~/.local/bin/composer
+php8.3 $(which ~/.local/bin/composer) update
+```
+
+## Create migration Entities (src/Entity) to your db (with mysql connect) 
+```
+php bin/console make:migration
+php bin/console doctrine:migrations:migrate
+
+# if shared hosting 
+php8.3 bin/console make:migration
+php8.3 bin/console doctrine:migrations:migrate
+```
+
+
+## Create site files in Google Drive: 
+1 Create site folder for site files in Google Drive
+  somesite.com
+2 Download file "Pages & Menu"
+  https://docs.google.com/spreadsheets/d/17Z1l-7S-VNsdHu3RWHbEIOrtjSi37D-1aOKoK_moX7g
+3 Create in Google Drive: 
+  somesite.com/Pages & Menu
+
+## Install Symfony at local pc for development
+https://symfony.com/doc/current/setup.html
+
 ---
 
 # Features 
