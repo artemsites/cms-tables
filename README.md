@@ -58,7 +58,7 @@ php8.3 bin/console doctrine:migrations:migrate
 1 Create site folder for site files in Google Drive
   somesite.com
 2 Download file "Pages & Menu"
-  https://docs.google.com/spreadsheets/d/17Z1l-7S-VNsdHu3RWHbEIOrtjSi37D-1aOKoK_moX7g
+  https://docs.google.com/spreadsheets/d/19NC3QrrWEvAwljyhzKF9LqCds4gtOvP5OAZUqqd3k-w
 3 Create in Google Drive: 
   somesite.com/Pages & Menu
 4 Add key to: 
