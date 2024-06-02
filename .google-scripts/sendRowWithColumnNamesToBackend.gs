@@ -38,10 +38,10 @@ function sendRowWithColumnNamesToBackend() {
 
     var sheetName = sheet.getName();
     if (sheetName==='Pages') {
-      UrlFetchApp.fetch(host+'cms-sheets/page-update', requestOptions);
+      UrlFetchApp.fetch(host+'/cms-sheets/page-update', requestOptions);
     } 
     else if (sheetName==='Menu') {
-      UrlFetchApp.fetch(host+'cms-sheets/menu-update', requestOptions);
+      UrlFetchApp.fetch(host+'/cms-sheets/menu-update', requestOptions);
     }
     else throw new Error('There is no handler for this sheet!');
   }
