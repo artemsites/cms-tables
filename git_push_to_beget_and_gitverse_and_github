@@ -1,0 +1,4 @@
+#!/bin/bash
+git push origin main
+git push gitverse main
+git push github main
