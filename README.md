@@ -1,4 +1,4 @@
-# CMS Sheets - a site management system based on Symfony and Google Tables
+# CMS Tables - a site management system based on Symfony and Google Tables
 
 
 
@@ -8,9 +8,9 @@
 
 # Installation 
 
-## Clone cms-sheets: 
+## Clone cms-tables: 
 ```
-git clone git@github.com:artemsites/cms-sheets.git
+git clone git@github.com:artemsites/cms-tables.git
 ```
 
 ## Copy and rename 
