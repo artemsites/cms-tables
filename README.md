@@ -34,11 +34,7 @@ DATABASE_URL="mysql://username:password@server.com:3306/dbname?serverVersion=5.7
 ## Copy Google Table (Sheet) to your drive 
 https://docs.google.com/spreadsheets/d/19NC3QrrWEvAwljyhzKF9LqCds4gtOvP5OAZUqqd3k-w/edit?usp=sharing 
 
-## Migration tables to your database 
-```
-php bin/console doctrine:migrations:migrate 
-```
-It is migrate file migrations/Version[id].php to your database! 
+
 
 ## Change Key and Domain in Google Table
 ![alt text](.docs/readme/image.png)
@@ -63,8 +59,24 @@ php8.3 $(which ~/.local/bin/composer) update
 ```
 ![alt text](.docs/readme/image-6.png) 
 
+
+
 ## If you are doing local development, then you need to create access to remote mysql
 ![alt text](.docs/readme/image-6.1.jpg) 
+
+
+
+## Migration tables to your database
+```
+php bin/console doctrine:migrations:migrate
+```
+Or:
+```
+php8.3 bin/console doctrine:migrations:migrate
+```
+It is migrate file migrations/Version[id].php to your database!
+
+
 
 ## Then create first page at google table! 
 ![alt text](.docs/readme/image-7.png)
