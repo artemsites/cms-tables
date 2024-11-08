@@ -12,6 +12,10 @@
 ```
 git clone git@github.com:artemsites/cms-tables.git
 ```
+OR:
+```
+git clone ssh://git@gitverse.ru:2222/artemsites/cms-tables.git
+```
 
 ## Copy and rename 
 ```
