@@ -26,7 +26,7 @@ git clone ssh://git@gitverse.ru:2222/artemsites/cms-tables.git
 ```
 DATABASE_URL="mysql://username:password@server.com:3306/dbname" 
 ```
-With mysql version: 
+Or with mysql version: 
 ```
 DATABASE_URL="mysql://username:password@server.com:3306/dbname?serverVersion=5.7.21" 
 ```
@@ -58,9 +58,13 @@ It is migrate file migrations/Version[id].php to your database!
 ## Update composer vendors (libs) 
 For example at shared hosting (beget.com): 
 ```
+cd some-site.com
 php8.3 $(which ~/.local/bin/composer) update
 ```
 ![alt text](.docs/readme/image-6.png) 
+
+## If you are doing local development, then you need to create access to remote mysql
+![alt text](.docs/readme/image-6.1.jpg) 
 
 ## Then create first page at google table! 
 ![alt text](.docs/readme/image-7.png)
